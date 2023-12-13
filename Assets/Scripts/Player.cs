@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     private int health = 10;
+    public GameObject fierballPrefab;
+    public Transform attacPoint;
 
     public void TakeDamage(int damage)
     {
@@ -15,6 +17,13 @@ public class Player : MonoBehaviour
         {
             int index = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(index);
+        }
+    }
+    public void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(fierballPrefab, attacPoint.position, attacPoint.rotation);
         }
     }
 }
