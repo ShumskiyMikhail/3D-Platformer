@@ -7,7 +7,7 @@ public class Coins : MonoBehaviour
     public Object thisCoin;
     public void OnTriggerEnter(Collider other)
     {
-        Player player = other.GetComponent<Player>();
+        CoinsCounter player = other.GetComponent<CoinsCounter>();
         player.CollectCoins();
         Destroy(thisCoin);
     }

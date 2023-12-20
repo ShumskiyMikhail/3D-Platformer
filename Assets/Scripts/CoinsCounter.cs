@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class CoinsCounter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int coins = 0;
+    public void CollectCoins()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        coins += 1;
     }
 }
