@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    private int health = 10;
+    public int health = 10;
+    public int maxHealth = 10;
     public GameObject fierballPrefab;
     public Transform attacPoint;
     public AudioSource audioSource;
